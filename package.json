@@ -11,7 +11,10 @@
     "test:mock": "newman run postman/collections/FIT4110_lab03_iot_ingestion.postman_collection.json -e postman/environments/FIT4110_lab03_mock.postman_environment.json --reporters cli,junit --reporter-junit-export reports/newman-report-mock.xml",
     "test:local": "newman run postman/collections/FIT4110_lab03_iot_ingestion.postman_collection.json -e postman/environments/FIT4110_lab03_local.postman_environment.json --reporters cli,junit --reporter-junit-export reports/newman-report-local.xml",
     "test:html": "newman run postman/collections/FIT4110_lab03_iot_ingestion.postman_collection.json -e postman/environments/FIT4110_lab03_mock.postman_environment.json --reporters cli,htmlextra --reporter-htmlextra-export reports/newman-report.html",
+    "test:camera:mock": "newman run postman/collections/FIT4110_lab03_camera_stream.postman_collection.json -e postman/environments/FIT4110_lab03_mock.postman_environment.json --reporters cli,junit --reporter-junit-export reports/newman-report-camera-mock.xml",
+    "test:camera:html": "newman run postman/collections/FIT4110_lab03_camera_stream.postman_collection.json -e postman/environments/FIT4110_lab03_mock.postman_environment.json --reporters cli,htmlextra --reporter-htmlextra-export reports/newman-report-camera.html",
     "test:ci": "npm run lint:contracts && npm run test:mock",
+    "test:camera:ci": "npm run lint:contracts && npm run test:camera:mock",
     "run:lab03": "node run-lab03.js"
   },
   "devDependencies": {
